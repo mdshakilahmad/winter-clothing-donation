@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "title": "Warm Hearts Drive",
+      "image": "https://i.ibb.co.com/60tm0DwT/winter-img-1.jpg",
+      "description": "Providing warm clothes to underprivileged families in Dhaka.",
+      "status": "Ongoing",
+      "contactinfo": "contact@warmhearts.org",
+      "division": "Dhaka"
+    },
+    {
+      "id": 2,
+      "title": "Chattogram Winter Relief",
+      "image": "https://i.ibb.co.com/k6S9mbKM/winter-img-2.jpg",
+      "description": "Helping the homeless stay warm this winter in Chattogram.",
+      "status": "Ongoing",
+      "contactinfo": "help@chattogramrelief.com",
+      "division": "Chattogram"
+    },
+    {
+      "id": 3,
+      "title": "Sylhet Cozy Initiative",
+      "image": "https://i.ibb.co.com/JWRBYZSF/winter-img-3.jpg",
+      "description": "Distributing winter essentials to rural communities in Sylhet.",
+      "status": "Upcoming",
+      "contactinfo": "support@sylhetcozy.org",
+      "division": "Sylhet"
+    },
+    {
+      "id": 4,
+      "title": "Rajshahi Blanket Drive",
+      "image": "https://i.ibb.co.com/HLFnksxw/winter-img-4.jpg",
+      "description": "Collecting and distributing blankets for those in need in Rajshahi.",
+      "status": "Completed",
+      "contactinfo": "info@rajshahiblankets.com",
+      "division": "Rajshahi"
+    },
+    {
+      "id": 5,
+      "title": "Barishal Warmth Campaign",
+      "image": "https://i.ibb.co.com/rKGQgd0k/winter-img-5.jpg",
+      "description": "Providing sweaters and coats to low-income families in Barishal.",
+      "status": "Ongoing",
+      "contactinfo": "donate@barishalwarmth.org",
+      "division": "Barishal"
+    },
+    {
+      "id": 6,
+      "title": "Khulna Winter Assistance",
+      "image": "https://i.ibb.co.com/1J901d58/winter-img-6.jpg",
+      "description": "Ensuring no one in Khulna suffers from the cold this season.",
+      "status": "Upcoming",
+      "contactinfo": "reach@khulnahelp.com",
+      "division": "Khulna"
+    },
+    {
+      "id": 7,
+      "title": "Rangpur Shelter Aid",
+      "image": "https://i.ibb.co.com/SwzyDXf3/winter-img-7.jpg",
+      "description": "Offering winter clothing and shelter support to those in Rangpur.",
+      "status": "Ongoing",
+      "contactinfo": "support@rangpurshelter.org",
+      "division": "Rangpur"
+    },
+    {
+      "id": 8,
+      "title": "Mymensingh Winter Help",
+      "image": "https://i.ibb.co.com/Xfss8Y8k/winter-img-8.jpg",
+      "description": "Helping underprivileged communities stay warm in Mymensingh.",
+      "status": "Completed",
+      "contactinfo": "care@mymensinghhelp.com",
+      "division": "Mymensingh"
+    }
+  ]
+  
