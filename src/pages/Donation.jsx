@@ -5,7 +5,10 @@ const Donation = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("donation.json")
+    // fetch("donation.json")
+    fetch(
+      "https://donation-mdshakilahmad-mdshakilahmads-projects.vercel.app/api/donations"
+    )
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
