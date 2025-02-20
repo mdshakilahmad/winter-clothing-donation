@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const DonationCard = ({ donation }) => {
   const { title, image, description, status, contactinfo, division } = donation;
@@ -14,7 +15,9 @@ const DonationCard = ({ donation }) => {
       <p>{description}</p>
       <p>{contactinfo}</p>
       <p>{division}</p>
-      <button className="btn btn-primary">Donate Now</button>
+      <Link to={"/donate"}>
+        <button className="btn btn-primary">Donate Now</button>
+      </Link>
     </div>
   );
 };

@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";
 
 const Register = () => {
   const { createUser, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,11 +14,27 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(name, photoUrl, email, password);
+
+    console.log(typeof password);
+
+    // password validation check
+    if (password.length < 6) {
+      alert("Password should be at least 6 characters");
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      alert("Password should be at least one lowercase characters");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      alert("Password should be at least one uppercase characters");
+      return;
+    }
+
     createUser(email, password)
       .then((userCredential) => {
         const Currentuser = userCredential.user;
         setUser(Currentuser);
         console.log(Currentuser);
+        navigate("/"); // Redirect to home page
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -93,7 +110,11 @@ const Register = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
+              {/*    <Link to={"/"}>
+                <button className="btn btn-primary w-full">Register</button>
+              </Link> */}
+
+              <button className="btn btn-primary w-full">Register</button>
             </div>
 
             <div>

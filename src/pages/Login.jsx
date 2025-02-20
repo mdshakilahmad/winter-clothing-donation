@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";
+import { FaGoogle } from "react-icons/fa";
+
 const Login = () => {
-  const { setUser, loginUser } = useContext(AuthContext);
+  const { setUser, loginUser, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,11 +18,26 @@ const Login = () => {
         const Currentuser = userCredential.user;
         setUser(Currentuser);
         console.log(Currentuser);
+        navigate("/donate"); // Redirect to donate page
       })
       .catch((error) => {
         alert(error.code);
       });
   };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((userCredential) => {
+        const Currentuser = userCredential.user;
+        setUser(Currentuser);
+        console.log(Currentuser);
+        navigate("/donate"); // Redirect to donate page
+      })
+      .catch((error) => {
+        alert(error.code);
+      });
+  };
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -64,6 +82,16 @@ const Login = () => {
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
+            </div>
+
+            <div className="mx-auto">
+              <button
+                type="button"
+                onClick={handleGoogleSignIn}
+                className="btn btn-primary my-4"
+              >
+                <FaGoogle />
+              </button>
             </div>
 
             <div>
