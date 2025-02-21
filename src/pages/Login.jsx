@@ -15,9 +15,9 @@ const Login = () => {
 
     loginUser(email, password)
       .then((userCredential) => {
-        const Currentuser = userCredential.user;
-        setUser(Currentuser);
-        console.log(Currentuser);
+        const currentuser = userCredential.user;
+        setUser(currentuser);
+        console.log(currentuser);
         navigate("/donate"); // Redirect to donate page
       })
       .catch((error) => {
@@ -28,9 +28,9 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((userCredential) => {
-        const Currentuser = userCredential.user;
-        setUser(Currentuser);
-        console.log(Currentuser);
+        const currentuser = userCredential.user;
+        setUser(currentuser);
+        console.log(currentuser);
         navigate("/donate"); // Redirect to donate page
       })
       .catch((error) => {

@@ -31,9 +31,9 @@ const Register = () => {
 
     createUser(email, password)
       .then((userCredential) => {
-        const Currentuser = userCredential.user;
-        setUser(Currentuser);
-        console.log(Currentuser);
+        const currentuser = userCredential.user;
+        setUser(currentuser);
+        console.log(currentuser);
         navigate("/"); // Redirect to home page
       })
       .catch((error) => {
