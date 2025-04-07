@@ -1,27 +1,32 @@
-/* import { gsap } from "gsap";
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react"; */
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { TiTickOutline } from "react-icons/ti";
 import about from "../assets/about.jpg";
 const About = () => {
-  /*   const textRef = useRef(null);
-  gsap.registerPlugin(useGSAP);
   useGSAP(() => {
-    gsap.fromTo(
-      textRef.current,
-      { opacity: 0, x: -50, rotate: -10 },
-      {
-        opacity: 1,
-        x: 0,
-        rotate: 0,
-        duration: 1,
-        delay: 0.5,
-        ease: "power3.out",
-      }
-    );
-  }, []); */
+    gsap.utils.toArray(".box").forEach((box) => {
+      gsap.fromTo(
+        box,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: box,
+            start: "top 80%", // When 80% of the box is in view
+            end: "bottom 50%",
+            scrub: 1, // Smooth animation
+          },
+        }
+      );
+    });
+  }, []);
   return (
-    <div className="flex justify-between gap-5 py-5 items-center">
+    <div className="box flex justify-between gap-5 py-5 items-center">
       {/* <h3 ref={textRef}>winter-clothing-donation</h3> */}
       <div>
         <img className="w-full" src={about} alt="about-img" />

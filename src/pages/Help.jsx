@@ -1,6 +1,9 @@
 const Help = () => {
   return (
     <div className="bg-gray-100 py-11">
+      <h2 className="text-3xl text-center py-5">
+        Welcome to Winter Clothing Donation
+      </h2>
       <h2 className="text-center font-semibold text-2xl">How to Help</h2>
       <p className="text-center">
         Your kidness can bring warmth and hope to others. Heres how can help
